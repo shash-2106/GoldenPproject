@@ -28,16 +28,16 @@ class Game{
             }
     player1 = createSprite(200,500);
     player1.addImage(exp_img);
-    player1.scale = 0.7;
+    player1.scale = 0.8;
   
     player2 = createSprite(400,500);
     player2.addImage(exp_img);
-    player2.scale = 0.7;
+    player2.scale = 0.8;
   
 
     player3 = createSprite(600,500);
     player3.addImage(exp_img);
-    player3.scale = 0.7;
+    player3.scale = 0.8;
   
 
     players=[player1,player2,player3];
@@ -80,10 +80,10 @@ class Game{
                      text("Player 2 : "+allPlayers.player2.score,50,100);
                      text("Player 3 : "+allPlayers.player3.score,50,150);
                     
-                     console.log(allPlayers);
+                     //console.log(allPlayers);
                  
                  }
-                console.log("E");
+               // console.log("E");
                 
                  
 
@@ -158,6 +158,7 @@ class Game{
         form.hide();
         player.getPlayersAtEnd();
 
+        console.log(player.rank1);
         Player.getPlayerInfo();
          image(back_img2, 0, 0, 1000, 800);
          var x = 100;
@@ -282,10 +283,10 @@ class Game{
                            }
                           }
                       }
-                     if(player.score >= 50){
+                     if(player.score > 50){
                        
-                         player.rank = player.rank + 1;
-                         Player.updatePlayersAtEnd(player.rank);
+                         player.rank1 = player.rank1 + 1;
+                         //Player.updatePlayersAtEnd(player.rank);
                          end();
                      }
          }
