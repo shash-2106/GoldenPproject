@@ -134,7 +134,7 @@ class Game{
                  }
 
                  if(player.score >= 10){
-                     game.update(3);
+                    gameState = 3;
                  }
                  
                   
@@ -165,6 +165,12 @@ class Game{
          var y = 200;
          var index = 0;
          drawSprites();
+         textSize(20);
+                     fill("white");
+                     text("Bravo determined explorers for coming this far! But this stage is going to be demanding…",120,40);
+                     text("Seek for an asset which’ll help you to open the treasure, an asset which is outstanding!",120,80);
+                     text("An asset undermined for its value, staying far from greed, ",140,120);
+                     text("But which gives invaluable knowledge, the real treasure indeed",130,160);
          for(var plr in allPlayers){
             
             
